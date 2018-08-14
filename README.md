@@ -11,7 +11,7 @@ Install the depedecies
 $ npm install
 ```
 
-## Using webpack-dev-server
+## Starting the webpack-dev-server
 1. Start the local webpack-dev-server.
 ```sh
 $ npm run serve
@@ -19,17 +19,12 @@ $ npm run serve
 
 2. Navigate to [http://localhost:3000](http://localhost:3000) in your web browser.
 
-Build a development version with the following commnand
+## Building for development
 ```sh
 $ npm run build
 ```
 
-## Development build
-```sh
-$ npm run build
-```
-
-## Production build
+## Building for production
 ```sh
 $ npm run build:prod
 ```
