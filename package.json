@@ -4,9 +4,9 @@
   "description": "A webpack boilerplate",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack --mode=development && webpack-dev-server --mode=development --config webpack.config.js",
-    "build": "webpack --mode=development --config webpack.config.js",
-    "build -prod": "webpack --mode=production --config webpack.config.js"
+    "serve": "webpack --mode=development && webpack-dev-server --mode=development --config ./webpack.config.dev.js",
+    "build": "webpack --mode=development --config ./webpack.config.dev.js",
+    "build -prod": "webpack --mode=production --config ./webpack.config.prod.js"
   },
   "author": "Gustaf Gunér",
   "license": "MIT",

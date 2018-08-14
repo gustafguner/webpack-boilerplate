@@ -10,7 +10,7 @@ module.exports = {
 		app: ['babel-polyfill', './src/app.js']
 	},
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, './dist'),
 		filename: 'app.bundle.js'
 	},
 	module: {
@@ -77,12 +77,7 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
       filename: 'styles.bundle.css'
-    }),
-    new OptimizeCssAssetsPlugin({
-      cssProcessor: require('cssnano'),
-      cssProcessorOptions: { discardComments: { removeAll: true } }
-    }),
-    new UglifyJsPlugin()
+    })
 	],
   devServer: {
     port: 3000
