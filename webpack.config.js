@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -24,7 +26,12 @@ module.exports = {
 			test: /\.s[a|c]ss?$/, 
 			use: [
 				MiniCssExtractPlugin.loader,
-				'css-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            minimize: true
+          }
+        },
 				{
           loader: 'postcss-loader',
           options: {
@@ -46,6 +53,11 @@ module.exports = {
 		}),
 		new MiniCssExtractPlugin({
       filename: "styles.bundle.css"
-    })
+    }),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: { removeAll: true } }
+    }),
+    new UglifyJsPlugin()
 	]
 }
