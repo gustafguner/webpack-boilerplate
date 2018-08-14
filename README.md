@@ -6,7 +6,8 @@ A basic webpack 4 boilerplate.
 [node.js](https://nodejs.org/)
 
 ## Setup
-Install the depedecies
+1. Clone this repository.
+2. Install the dependencies.
 ```sh
 $ npm install
 ```
@@ -17,7 +18,7 @@ $ npm install
 $ npm run serve
 ```
 
-2. Navigate to [http://localhost:3000](http://localhost:3000) in your web browser.
+2. Navigate to [http://localhost:3000](http://localhost:3000).
 
 ## Building for development
 ```sh
@@ -30,4 +31,8 @@ $ npm run build:prod
 ```
 
 ## Features
-WIP
+* [Babel](https://github.com/babel/babel)
+* [Sass](https://github.com/sass/sass)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
+* File loading via [file-loader](https://github.com/webpack-contrib/file-loader)
+* Minify HTML, CSS, JavaScript and SVG
