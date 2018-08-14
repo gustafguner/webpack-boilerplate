@@ -44,7 +44,19 @@ module.exports = {
         },
 				'sass-loader'
 			]
-		}]
+		},
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      use: [
+        { 
+          loader: 'file-loader', 
+          options: { 
+            name: '[name].[ext]', 
+            outputPath: './assets/images/' 
+          } 
+        }
+      ]
+    }]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
