@@ -1,0 +1,31 @@
+{
+  "name": "babel_webpack_starter",
+  "version": "1.0.0",
+  "description": "A webpack boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack --mode=development && webpack-dev-server --mode=development --config webpack.config.js",
+    "build": "webpack --mode=development --config webpack.config.js",
+    "build -prod": "webpack --mode=production --config webpack.config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.0.7",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
