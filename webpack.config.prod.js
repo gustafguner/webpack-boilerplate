@@ -75,6 +75,21 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			hash: true,
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+        minifyURLs: false,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeOptionalTags: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributese: true,
+        useShortDoctype: true
+      },
 			template: './src/index.html'
 		}),
 		new MiniCssExtractPlugin({
