@@ -49,7 +49,7 @@ module.exports = {
 			]
 		},
     {
-      test: /\.(jpe?g|png|gif|svg)$/i,
+      test: /\.(jpe?g|png|gif)$/i,
       use: [
         { 
           loader: 'file-loader', 
@@ -61,7 +61,7 @@ module.exports = {
       ]
     },
     {
-      test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+      test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
       use: {
         loader: 'file-loader',
         options: {
@@ -69,6 +69,28 @@ module.exports = {
           outputPath: './assets/fonts/'
         }
       }
+    },
+    {
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './assets/images/'
+          }
+        },
+        {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [
+              {removeTitle: true},
+              {convertColors: {shorthex: false}},
+              {convertPathData: false}
+            ]
+          }
+        }
+      ]
     }]
 	},
 	plugins: [
