@@ -33,8 +33,9 @@ $ npm run build:prod
 ```
 
 ## Features
-* [Babel](https://github.com/babel/babel).
-* [Sass](https://github.com/sass/sass).
-* [Autoprefixer](https://github.com/postcss/autoprefixer).
-* File loading via [file-loader](https://github.com/webpack-contrib/file-loader).
-* Minification of HTML, CSS, JavaScript and SVG.
+* [Babel](https://github.com/babel/babel)
+* [Sass](https://github.com/sass/sass)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
+* File loading via [file-loader](https://github.com/webpack-contrib/file-loader)
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* Minification of HTML, CSS, JavaScript and SVG
