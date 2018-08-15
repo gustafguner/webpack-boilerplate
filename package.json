@@ -1,15 +1,31 @@
 {
-  "name": "webpack-starter",
+  "name": "webpack-boilerplate",
   "version": "1.0.0",
-  "description": "A webpack boilerplate",
-  "main": "index.js",
+  "description": "A webpack 4 boilerplate",
+  "author": "Gustaf Gunér (https://github.com/gustafguner)",
+  "main": "src/app.js",
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "webpack4",
+    "babel",
+    "sass",
+    "autoprefixer",
+    "webpack-dev-server"
+  ],
+  "bugs": {
+    "url": "https://github.com/gustafguner/webpack-boilerplate/commits/master",
+    "email": "gustaf@guner.se"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustafguner/webpack-boilerplate.git"
+  },
   "scripts": {
     "serve": "webpack --mode=development && webpack-dev-server --mode=development --config ./webpack.config.dev.js",
     "build": "webpack --mode=development --config ./webpack.config.dev.js",
     "build:prod": "webpack --mode=production --config ./webpack.config.prod.js"
   },
-  "author": "Gustaf Gunér",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.1.0",
     "babel-core": "^6.26.3",
