@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A webpack 4 boilerplate",
   "author": "Gustaf Gunér (https://github.com/gustafguner)",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "license": "MIT",
   "keywords": [
     "webpack",
