@@ -22,7 +22,7 @@
     "url": "https://github.com/gustafguner/webpack-boilerplate.git"
   },
   "scripts": {
-    "serve": "webpack --mode=development && webpack-dev-server --mode=development --config ./webpack.config.dev.js",
+    "serve": "webpack --mode=development --config ./webpack.config.dev.js && webpack-dev-server --mode=development --config ./webpack.config.dev.js",
     "build": "webpack --mode=development --config ./webpack.config.dev.js",
     "build:prod": "webpack --mode=production --config ./webpack.config.prod.js"
   },
