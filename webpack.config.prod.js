@@ -49,9 +49,12 @@ module.exports = {
 			]
 		},
     {
-      test: /\.(jpe?g|png|gif)$/i,
+      test: /\.(jpe?g|png|gif)$/,
+      include: [
+        path.resolve(__dirname, 'src/assets/images')
+      ],
       use: [
-        { 
+        {
           loader: 'file-loader', 
           options: { 
             name: '[name].[ext]', 
@@ -61,7 +64,25 @@ module.exports = {
       ]
     },
     {
-      test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+      test: /\.(png|ico)$/,
+      include: [
+        path.resolve(__dirname, 'src/assets/favicons')
+      ],
+      use: [
+        {
+          loader: 'file-loader', 
+          options: { 
+            name: '[name].[ext]', 
+            outputPath: './assets/favicons/' 
+          } 
+        }
+      ]
+    },
+    {
+      test: /.(ttf|svg|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+      include: [
+        path.resolve(__dirname, 'src/assets/fonts')
+      ],
       use: {
         loader: 'file-loader',
         options: {
@@ -72,6 +93,9 @@ module.exports = {
     },
     {
       test: /\.svg$/,
+      include: [
+        path.resolve(__dirname, 'src/assets/images')
+      ],
       use: [
         {
           loader: 'file-loader',
